@@ -8,11 +8,12 @@ namespace GildedRoseKata
 {
     public sealed class AgedBrie : ItemProxy
     {
+        public const string AgedBrieName = "Aged Brie";
         public AgedBrie(Item item) : base(item)
         {
-            if (item.Name != "Aged Brie")
+            if (item.Name != AgedBrieName)
             {
-                throw new ArgumentException("Item is not Aged Brie", nameof(item));
+                throw new ArgumentException($"Item is not {AgedBrieName}", nameof(item));
             }
         }
 
